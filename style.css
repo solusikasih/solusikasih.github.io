@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #2c3e50; background-color: #fcfcfc; }
+.container { max-width: 1100px; margin: auto; padding: 0 20px; }
+
+/* Navigation */
+header { background: #006d6d; padding: 10px 0; border-bottom: 4px solid #d4af37; position: sticky; top: 0; z-index: 1000; }
+nav { display: flex; justify-content: space-between; align-items: center; }
+.logo-area { display: flex; align-items: center; gap: 12px; }
+.business-logo { height: 55px; border-radius: 4px; border: 1px solid #d4af37; }
+.brand-name { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: #ffffff; font-weight: 700; }
+.brand-name span { color: #d4af37; }
+.nav-links { display: flex; list-style: none; gap: 25px; align-items: center; }
+.nav-links a { text-decoration: none; color: #ffffff; font-weight: 600; font-size: 0.9rem; }
+.nav-btn { background: #d4af37; color: white; border: none; padding: 10px 22px; border-radius: 4px; cursor: pointer; font-weight: 600; transition: 0.3s; }
+.nav-btn:hover { background: #ffffff; color: #006d6d; }
+
+/* Hero */
+.hero { 
+    background: linear-gradient(rgba(0, 109, 109, 0.75), rgba(0, 60, 60, 0.85)), 
+                url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2000&auto=format&fit=crop');
+    background-size: cover; background-position: center; color: white; padding: 160px 0; text-align: center; 
+}
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 3.2rem; margin-bottom: 15px; }
+.tagline { font-size: 1.5rem; color: #d4af37; margin-bottom: 40px; }
+
+.btn-whatsapp { 
+    background: #25d366; color: white; padding: 18px 40px; text-decoration: none; 
+    border-radius: 50px; font-weight: bold; display: inline-block; transition: 0.3s; font-size: 1.1rem;
+}
+.btn-whatsapp:hover { background: #128c7e; transform: translateY(-3px); }
+
+/* Services */
+#services { padding: 100px 0; text-align: center; }
+.section-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 50px; color: #006d6d; }
+.grid { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
+.card { flex: 1 1 300px; background: #fff; padding: 50px 30px; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); border-bottom: 6px solid #d4af37; transition: 0.3s; }
+.icon { font-size: 3.5rem; }
+
+/* Contact */
+.contact-section { padding: 80px 0; background: #f0f7f7; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: start; }
+.contact-info h3 { font-family: 'Playfair Display', serif; color: #006d6d; font-size: 1.8rem; margin-bottom: 20px; }
+.contact-info p { margin-bottom: 15px; }
+.contact-info a { color: #006d6d; text-decoration: none; font-weight: 600; }
+
+.social-links { margin-top: 25px; display: flex; gap: 20px; }
+.social-links i { font-size: 2rem; color: #006d6d; transition: 0.3s; }
+.social-links i:hover { color: #d4af37; }
+
+footer { background: #004d4d; color: white; padding: 40px 0; text-align: center; }
+
+@media (max-width: 768px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2.2rem; }
+    .nav-links { display: none; }
+}

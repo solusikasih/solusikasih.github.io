@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap');
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { font-family: 'Poppins', sans-serif; color: #2c3e50; background: #fcfcfc; line-height: 1.6; }
@@ -12,23 +13,38 @@ nav { display: flex; justify-content: space-between; align-items: center; }
 .nav-links { display: flex; list-style: none; gap: 15px; align-items: center; }
 .nav-links a { color: white; text-decoration: none; font-size: 0.85rem; font-weight: 600; }
 
-.lang-switch { border: 1px solid #d4af37; padding: 2px 8px; border-radius: 4px; color: #d4af37 !important; }
+.lang-switch-link {
+    display: flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.1);
+    padding: 5px 12px; border-radius: 20px; border: 1px solid #d4af37; color: white !important; font-size: 0.8rem !important;
+}
+.lang-switch-link:hover { background: #d4af37; color: #006d6d !important; }
 
 .hero { background: linear-gradient(rgba(0,109,109,0.8), rgba(0,60,60,0.8)), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2000'); background-size: cover; background-position: center; color: white; padding: 120px 0; text-align: center; }
+.tagline { color: #d4af37; font-size: 1.4rem; margin-bottom: 30px; font-weight: 600; }
+
+.hero-btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
 .btn-primary { background: #d4af37; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; }
-.btn-whatsapp { background: #25d366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; margin-left: 10px; }
+.btn-whatsapp { background: #25d366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; }
 
 .section-padding { padding: 80px 0; }
-.section-title { text-align: center; color: #006d6d; margin-bottom: 40px; font-family: 'Playfair Display'; font-size: 2rem; }
-.resource-grid { display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; }
-.resource-category h4 { color: #d4af37; margin-bottom: 15px; }
+.section-title { text-align: center; color: #006d6d; margin-bottom: 40px; font-family: 'Playfair Display'; font-size: 2.2rem; }
+.grid { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
+.card { flex: 1 1 300px; background: white; padding: 40px; border-radius: 15px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-bottom: 5px solid #d4af37; }
+.icon { font-size: 3rem; margin-bottom: 10px; }
+.btn-small { background: #006d6d; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 15px; font-weight: 600; }
+
+.resource-grid { display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; gap: 30px; }
+.resource-category h4 { color: #d4af37; margin-bottom: 15px; font-size: 1.4rem; }
 .resource-category ul { list-style: none; }
 .resource-category a { color: #006d6d; text-decoration: none; font-weight: 600; }
 
-.contact-section { background: #f0f7f7; padding: 60px 0; }
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
-.social-links { margin-top: 20px; display: flex; gap: 15px; flex-wrap: wrap; }
-.social-links i { font-size: 1.8rem; color: #006d6d; }
+.contact-section { background: #f0f7f7; padding: 80px 0; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center; }
+.social-links { margin-top: 25px; display: flex; gap: 15px; flex-wrap: wrap; }
+.social-links i { font-size: 2.2rem; color: #006d6d; }
 
-footer { background: #004d4d; color: white; padding: 20px 0; text-align: center; font-size: 0.8rem; }
+footer { background: #004d4d; color: white; padding: 30px 0; text-align: center; font-size: 0.8rem; }
+footer a { color: #d4af37; text-decoration: none; }
+.nav-btn { background: #d4af37; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: 600; }
+
 @media (max-width: 768px) { .nav-links { display: none; } .contact-grid { grid-template-columns: 1fr; } }

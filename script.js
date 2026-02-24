@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const contactBtn = document.getElementById('cta-btn');
     contactBtn.addEventListener('click', () => {
-        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        const contactSection = document.getElementById('contact');
+        if(contactSection) contactSection.scrollIntoView({ behavior: 'smooth' });
     });
 });
